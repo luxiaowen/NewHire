@@ -1,0 +1,9 @@
+#!/bin/bash
+#set manipulation
+sort f1 -u > t1
+sort f2 -u > t2
+comm      t1 t2 > AbingB
+comm -12  t1 t2 > AjiaoB
+comm -23  t1 t2 > A-B
+comm -13  t1 t2 > B-A
+more AbingB AjiaoB A-B B-A

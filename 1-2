@@ -1,0 +1,10 @@
+#!/bin/bash
+#test for dictionary
+echo Dictionary:
+cat 1-2Dict
+echo Text to test:
+cat 1-2Test
+echo Words not in the dictionary:
+tr -s "[ ]" "[\n]" < 1-2Test | sort -u |tr a-z A-Z > tt1
+sort -u 1-2Dict | tr a-z A-Z > tt2
+comm -23 tt1 tt2

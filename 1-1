@@ -1,0 +1,4 @@
+#!/bin/bash
+#list users who is logged in dict order and show unique name
+#who |cut -d' ' -f 1|sort|uniq
+who |cut -d' ' -f 1|sort -u

@@ -1,0 +1,3 @@
+#!/bin/bash
+#统计apache日志中操作时间的分布情况
+awk -F ":" '{print int($4+$5)}' ipTimeData | awk 'BEGIN {print "Time\tCount"} {a[$0]++} END {for (i in a){ print i"\t"a[i]}}'

@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "Unique IP:"
+awk '{print $1}' ipHttpData | sort | uniq
+echo "# of unique IP:"
+awk '{print $1}' ipHttpData | sort | uniq | wc -l
+awk -F " " '{print $1,$4}' ipHttpData | awk -F "[" '{print $1,$2}' | awk -F ":" '{print $1":"$2":"$3}' | awk -F " " '{print $1,$2}' | awk 'BEGIN {print "IP\tCount"} {a[$1]++} END {for (i in a){ print i"\t"a[i]}}'
+awk -F " " '{print $1,$4}' ipHttpData | awk -F "[" '{print $1,$2}' | awk -F ":" '{print $1":"$2":"$3}' | awk -F " " '{print $1,$2}' | awk 'BEGIN {print "Issue IP"} {    a[$1]++} END {for (i in a){ if (a[i]>30) print i"\t"a[i]}}'
