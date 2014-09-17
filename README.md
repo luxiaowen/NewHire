@@ -6,5 +6,5 @@ NewHire
 1-4 调用f1和f2，求两个文件的交并差
 1-5 调用ipTimeData统计操作时间
 2-5 调用ipHttpData统计独立ip个数以及异常访问的ip
-2-6 web接口 输入为url 输出结果是否可用
+2-6 checkurl.py:web接口 输入为url 输出结果是否可用 testcheckurl.py:对应的Unittest文件
 新人培训-技术-测试习题
